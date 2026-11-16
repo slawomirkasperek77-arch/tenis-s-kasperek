@@ -65,16 +65,15 @@
             position: sticky;
             top: 0;
             z-index: 1100;
-            height: 42px;
-            padding: 0 5%;
+            min-height: 42px;
+            padding: 8px 12px;
             box-sizing: border-box;
             background-color: #0B2035;
             color: #C5D0DA;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            justify-content: center;
             align-items: center;
-            justify-items: center;
-            gap: 15px;
+            gap: 18px;
             font-size: 11px;
             line-height: 1.4;
         }
@@ -83,7 +82,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 7px;
+            gap: 6px;
             white-space: nowrap;
         }
 
@@ -1102,7 +1101,6 @@
             .location-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-
         }
 
         /* WERSJA MOBILNA */
@@ -1116,24 +1114,20 @@
             /* GÓRNY PASEK NA TELEFONIE */
 
             .site-topbar {
-                height: 54px;
-                padding: 5px 8px;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 1fr;
-                gap: 1px;
+                min-height: 42px;
+                height: auto;
+                padding: 8px 4px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
                 font-size: 9px;
             }
 
             .topbar-item {
-                gap: 5px;
-            }
-
-            .topbar-item:first-child {
-                grid-row: 1;
-            }
-
-            .topbar-item:nth-child(2) {
-                grid-row: 2;
+                gap: 4px;
+                white-space: nowrap;
             }
 
             /* NAGŁÓWEK NA TELEFONIE */
@@ -1142,7 +1136,7 @@
                 flex-direction: column;
                 gap: 13px;
                 padding: 15px 12px;
-                top: 54px;
+                top: 42px;
             }
 
             .logo {
@@ -1493,7 +1487,6 @@
                 width: 100%;
                 box-sizing: border-box;
             }
-
         }
 
         /* WĄSKIE EKRANY */
@@ -1501,9 +1494,14 @@
         @media (max-width: 380px) {
 
             .site-topbar {
-                padding-left: 5px;
-                padding-right: 5px;
+                padding-left: 3px;
+                padding-right: 3px;
+                gap: 7px;
                 font-size: 8px;
+            }
+
+            .topbar-item {
+                gap: 3px;
             }
 
             .logo {
@@ -1529,7 +1527,6 @@
             .location-grid {
                 grid-template-columns: 1fr 1fr;
             }
-
         }
 
     </style>
@@ -1546,12 +1543,12 @@
     <div class="site-topbar">
 
         <div class="topbar-item">
-            <strong>DZISIAJ:</strong>
+            <strong>DATA:</strong>
             <span id="currentDate"></span>
         </div>
 
         <div class="topbar-item">
-            <strong>AKTUALNA GODZINA:</strong>
+            <strong>GODZINA:</strong>
             <span class="topbar-clock" id="currentTime"></span>
         </div>
 
@@ -2162,9 +2159,8 @@
 
             const date = new Intl.DateTimeFormat("pl-PL", {
                 timeZone: "Europe/Warsaw",
-                weekday: "long",
                 day: "2-digit",
-                month: "long",
+                month: "2-digit",
                 year: "numeric"
             });
 
