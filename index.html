@@ -1206,6 +1206,32 @@
                 font-size: 11px;
             }
 
+            /* FORMULARZ – WERSJA MOBILNA */
+
+            .training-form {
+                padding: 22px 16px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .form-field label {
+                display: none;
+            }
+
+            .form-field input,
+            .form-field select,
+            .form-field textarea {
+                font-size: 14px;
+                padding: 15px 12px;
+            }
+
+            .form-field textarea {
+                min-height: 110px;
+            }
+
         }
 
     </style>
@@ -1570,7 +1596,7 @@
                     <div class="form-field">
                         <label for="clientAge">Dla kogo są zajęcia? *</label>
                         <select id="clientAge" name="age" required>
-                            <option value="">Wybierz</option>
+                            <option value="">Dla kogo są zajęcia?</option>
                             <option>Dla osoby dorosłej</option>
                             <option>Dla dziecka lub młodzieży</option>
                         </select>
@@ -1579,7 +1605,7 @@
                     <div class="form-field">
                         <label for="clientLevel">Poziom zaawansowania *</label>
                         <select id="clientLevel" name="level" required>
-                            <option value="">Wybierz</option>
+                            <option value="">Wybierz poziom zaawansowania</option>
                             <option>Początkujący</option>
                             <option>Średniozaawansowany</option>
                             <option>Zaawansowany</option>
@@ -1590,7 +1616,7 @@
                     <div class="form-field">
                         <label for="trainingType">Rodzaj zajęć *</label>
                         <select id="trainingType" name="type" required>
-                            <option value="">Wybierz</option>
+                            <option value="">Wybierz rodzaj zajęć</option>
                             <option>Trening indywidualny</option>
                             <option>Trening grupowy</option>
                             <option>Jeszcze nie wiem</option>
@@ -1600,7 +1626,7 @@
                     <div class="form-field">
                         <label for="trainingPlace">Preferowana lokalizacja *</label>
                         <select id="trainingPlace" name="place" required>
-                            <option value="">Wybierz</option>
+                            <option value="">Wybierz lokalizację</option>
                             <option>Kęty</option>
                             <option>Oświęcim</option>
                             <option>Bielsko-Biała</option>
