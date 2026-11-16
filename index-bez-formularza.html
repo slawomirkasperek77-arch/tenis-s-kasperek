@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -659,6 +658,47 @@
             font-weight: 600;
             margin: 0;
         }
+                    border-radius: 15px;
+            overflow: hidden;
+            background-color: #F3F6F8;
+            border: 1px solid #DCE3E8;
+            position: relative;
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-placeholder {
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #667788;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .gallery-placeholder span {
+            color: #78A832;
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .gallery-placeholder p {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+        }
 
         /* SEKCJA KONTAKT */
 
@@ -1238,6 +1278,7 @@
             }
 
             /* PRZYCISKI PŁYWAJĄCE */
+                        /* PRZYCISKI PŁYWAJĄCE */
 
             .back-to-top {
                 bottom: 18px;
