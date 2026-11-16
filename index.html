@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenis S. Kasperek</title>
+
+    <!-- CZCIONKA MONTSERRAT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* USTAWIENIA OGÓLNE */
+
+        body {
+            background-color: #F3F6F8;
+            color: #34495E;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* NAGŁÓWEK I MENU */
+
+        header {
+            background-color: #102B46;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #78A832;
+        }
+
+        /* SEKCJA POWITALNA */
+
+        .hero {
+            background-color: white;
+            width: 80%;
+            margin: 60px auto;
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .hero h1 {
+            color: #102B46;
+            font-size: 46px;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* PRZYCISK */
+
+        .hero-button {
+            display: inline-block;
+            background-color: #78A832;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: #102B46;
+            transform: translateY(-3px);
+        }
+
+        /* MOTTO */
+
+        .motto {
+            background-color: #102B46;
+            color: white;
+            width: 80%;
+            margin: 40px auto;
+            padding: 45px 30px;
+            border-radius: 20px;
+        }
+
+        .motto h2 {
+            color: #78A832;
+            font-size: 30px;
+            line-height: 1.4;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .motto p {
+            font-size: 20px;
+            line-height: 1.6;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .motto span {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #C5D0DA;
+        }
+
+        /* SEKCJA O MNIE */
+
+        #o-mnie {
+            background-color: white;
+            width: 80%;
+            margin: 40px auto;
+            padding: 50px 30px;
+            border-radius: 20px;
+        }
+
+        #o-mnie h2 {
+            color: #102B46;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .about-line {
+            width: 70px;
+            height: 4px;
+            background-color: #78A832;
+            border-radius: 5px;
+            margin: 0 auto 30px;
+        }
+
+        .about-title {
+            color: #78A832;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .about-text {
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        /* WERSJA MOBILNA - SMARTFONY */
+
+        @media (max-width: 768px) {
+
+            /* NAGŁÓWEK */
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav a {
+                margin-left: 0;
+                font-size: 14px;
+            }
+
+            /* SEKCJA POWITALNA */
+
+            .hero {
+                flex-direction: column;
+                width: 85%;
+                padding: 25px;
+                margin: 30px auto;
+                gap: 25px;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-image img {
+                height: 250px;
+            }
+
+            /* MOTTO */
+
+            .motto {
+                width: 85%;
+                padding: 30px 20px;
+                margin: 30px auto;
+            }
+
+            .motto h2 {
+                font-size: 22px;
+            }
+
+            .motto p {
+                font-size: 16px;
+            }
+
+            /* SEKCJA O MNIE */
+
+            #o-mnie {
+                width: 85%;
+                padding: 30px 20px;
+                margin: 30px auto;
+            }
+
+            #o-mnie h2 {
+                font-size: 26px;
+            }
+
+            .about-title {
+                font-size: 16px;
+            }
+
+            .about-text {
+                font-size: 15px;
+                line-height: 1.8;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- MENU GŁÓWNE -->
+
+    <header>
+
+        <div class="logo">TENIS S. KASPEREK</div>
+
+        <nav>
+            <a href="#o-mnie">O mnie</a>
+            <a href="#oferta">Oferta</a>
+            <a href="#lokalizacje">Lokalizacje</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+
+    </header>
+
+    <!-- SEKCJA POWITALNA -->
+
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <h1>ODKRYJ RADOŚĆ GRY W TENISA</h1>
+
+            <p>
+                Treningi tenisowe dla dzieci, młodzieży i dorosłych.
+                Rozwijaj swoje umiejętności, poprawiaj technikę
+                i czerp satysfakcję z każdego treningu.
+            </p>
+
+            <a href="#kontakt" class="hero-button">UMÓW TRENING</a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="images/foto strona powitalna.jpg" alt="Trening tenisa">
+
+        </div>
+
+    </div>
+
+    <!-- MOTTO -->
+
+    <section class="motto">
+
+        <h2>
+            „VICTORY BELONGS TO THE MOST TENACIOUS”
+        </h2>
+
+        <p>
+            „Zwycięstwo należy do najbardziej wytrwałych.”
+        </p>
+
+        <span>
+            MOTTO ROLAND-GARROS
+        </span>
+
+    </section>
+
+    <!-- SEKCJA O MNIE -->
+
+    <section id="o-mnie">
+
+        <h2>POZNAJ MNIE</h2>
+
+        <div class="about-line"></div>
+
+        <div class="about-title">
+            INSTRUKTOR TENISA ZIEMNEGO
+        </div>
+
+        <div class="about-text">
+
+            <p>
+                Jestem instruktorem tenisa ziemnego z uprawnieniami
+                Polskiego Związku Tenisowego. Tenis to dla mnie nie
+                tylko sport, ale również sposób na rozwój, budowanie
+                charakteru i pokonywanie własnych ograniczeń.
+            </p>
+
+            <p>
+                Podczas treningów stawiam na indywidualne podejście,
+                systematyczną pracę nad techniką oraz radość z gry.
+                Zapraszam dzieci, młodzież i dorosłych – zarówno osoby
+                rozpoczynające przygodę z tenisem, jak i tych, którzy
+                chcą doskonalić swoje umiejętności.
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
