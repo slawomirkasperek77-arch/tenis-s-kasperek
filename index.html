@@ -1206,12 +1206,63 @@
                 font-size: 11px;
             }
 
-            /* UKRYCIE PODPOWIEDZI WEWNĄTRZ PÓL TYLKO NA SMARTFONIE */
+            /* POPRAWIENIE FORMULARZA NA SMARTFONACH */
+
+            .training-form {
+                width: 100%;
+                padding: 22px 16px;
+                box-sizing: border-box;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .form-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0;
+                width: 100%;
+            }
+
+            .form-field {
+                width: 100%;
+                min-width: 0;
+                margin-bottom: 18px;
+                box-sizing: border-box;
+            }
+
+            .form-field input,
+            .form-field select,
+            .form-field textarea {
+                display: block;
+                width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+
+            .form-field label {
+                text-align: left;
+                margin-bottom: 8px;
+            }
+
+            /* UKRYCIE PODPOWIEDZI WEWNĄTRZ PÓL NA TELEFONIE */
 
             .form-field input::placeholder,
             .form-field textarea::placeholder {
                 color: transparent;
-                opacity: 0;
+            }
+
+            .form-field textarea {
+                min-height: 110px;
+            }
+
+            .form-checkbox {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .form-submit {
+                width: 100%;
+                box-sizing: border-box;
             }
 
         }
