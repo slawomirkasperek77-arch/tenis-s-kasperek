@@ -39,7 +39,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 90px;
+            scroll-padding-top: 100px;
         }
 
         body {
@@ -62,6 +62,65 @@
             z-index: 1100;
         }
 
+        /* GÓRNY PASEK - DATA, ZEGAR I INSTAGRAM */
+
+        .site-topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            min-height: 42px;
+            padding: 8px 5%;
+            box-sizing: border-box;
+            background-color: #0B2035;
+            color: #C5D0DA;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .topbar-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .topbar-item strong {
+            color: white;
+            font-weight: 700;
+        }
+
+        .topbar-clock {
+            color: #78A832;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .topbar-instagram {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: color 0.3s;
+        }
+
+        .topbar-instagram:hover {
+            color: #78A832;
+        }
+
+        .topbar-instagram svg {
+            width: 17px;
+            height: 17px;
+            fill: currentColor;
+        }
+
         /* NAGŁÓWEK I MENU */
 
         header {
@@ -72,7 +131,7 @@
             justify-content: space-between;
             align-items: center;
             position: sticky;
-            top: 0;
+            top: 42px;
             z-index: 999;
         }
 
@@ -823,30 +882,6 @@
             margin: 5px;
         }
 
-        /* DATA AKTUALIZACJI I ZEGAR */
-
-        .site-info {
-            margin: 20px auto 5px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.18);
-            max-width: 650px;
-            color: #C5D0DA;
-            font-size: 12px;
-            line-height: 1.9;
-        }
-
-        .site-info strong {
-            color: #78A832;
-            font-weight: 700;
-        }
-
-        .site-clock {
-            font-size: 14px;
-            font-weight: 700;
-            color: white;
-            letter-spacing: 0.5px;
-        }
-
         /* POWIĘKSZENIE CERTYFIKATU */
 
         #certificate-modal {
@@ -995,10 +1030,33 @@
 
         @media (max-width: 768px) {
 
+            .site-topbar {
+                min-height: 40px;
+                padding: 8px 10px;
+                gap: 8px;
+                justify-content: space-between;
+                font-size: 9px;
+            }
+
+            .topbar-item {
+                gap: 4px;
+            }
+
+            .topbar-instagram {
+                gap: 4px;
+                font-size: 9px;
+            }
+
+            .topbar-instagram svg {
+                width: 15px;
+                height: 15px;
+            }
+
             header {
                 flex-direction: column;
                 gap: 20px;
                 padding: 20px;
+                top: 40px;
             }
 
             nav {
@@ -1254,7 +1312,7 @@
                 font-size: 11px;
             }
 
-            /* POPRAWIENIE FORMULARZA NA SMARTFONACH */
+            /* FORMULARZ NA SMARTFONACH */
 
             .training-form {
                 width: 100%;
@@ -1326,6 +1384,28 @@
 
         }
 
+        /* WĄSKIE EKRANY */
+
+        @media (max-width: 380px) {
+
+            .site-topbar {
+                padding-left: 6px;
+                padding-right: 6px;
+                gap: 5px;
+                font-size: 8px;
+            }
+
+            .topbar-instagram {
+                font-size: 8px;
+            }
+
+            .topbar-instagram svg {
+                width: 13px;
+                height: 13px;
+            }
+
+        }
+
     </style>
 </head>
 
@@ -1334,6 +1414,40 @@
     <!-- PASEK POSTĘPU PRZEWIJANIA -->
 
     <div id="scroll-progress"></div>
+
+    <!-- GÓRNY PASEK - DATA, ZEGAR I INSTAGRAM -->
+
+    <div class="site-topbar">
+
+        <div class="topbar-item">
+            <span>OSTATNIA AKTUALIZACJA:</span>
+            <strong>16.11.2026</strong>
+        </div>
+
+        <div class="topbar-item">
+            <span>TERAZ:</span>
+            <span class="topbar-clock">
+                <span id="currentDate"></span>
+                |
+                <span id="currentTime"></span>
+            </span>
+        </div>
+
+        <a class="topbar-instagram"
+           href="https://www.instagram.com/tenis.kas77/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Odwiedź Instagram TENIS S. KASPEREK">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8zm4.2 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
+            </svg>
+
+            @tenis.kas77
+
+        </a>
+
+    </div>
 
     <!-- MENU GŁÓWNE -->
 
@@ -1456,7 +1570,9 @@
 
             <div class="certificate-image" onclick="openCertificate()">
                 <img src="images/certyfikat-pzt.jpg"
-                     alt="Certyfikat instruktora tenisa ziemnego Polskiego Związku Tenisowego PZT">
+                     alt="Certyfikat instruktora tenisa ziemnego Polskiego Związku Tenisowego PZT"
+                     loading="lazy"
+                     decoding="async">
             </div>
 
             <span class="certificate-caption">
@@ -1615,7 +1731,9 @@
 
             <div class="gallery-item reveal">
                 <img src="images/foto strona powitalna1.jpg"
-                     alt="Trening tenisowy na korcie">
+                     alt="Trening tenisa ziemnego na korcie"
+                     loading="lazy"
+                     decoding="async">
             </div>
 
             <div class="gallery-item reveal">
@@ -1804,25 +1922,6 @@
 
         <p>© 2026 TENIS S. KASPEREK. Wszelkie prawa zastrzeżone.</p>
 
-        <div class="site-info">
-
-            <p>
-                <strong>Ostatnia aktualizacja:</strong>
-                16 listopada 2026
-            </p>
-
-            <p>
-                <strong>Aktualna data i godzina:</strong>
-            </p>
-
-            <p class="site-clock">
-                <span id="currentDate"></span>
-                |
-                <span id="currentTime"></span>
-            </p>
-
-        </div>
-
     </footer>
 
     <!-- PŁYWAJĄCY PRZYCISK TELEFONU -->
@@ -1844,7 +1943,7 @@
         <span class="certificate-close">&times;</span>
 
         <img src="images/certyfikat-pzt.jpg"
-             alt="Powiększony certyfikat instruktora tenisa PZT"
+             alt="Powiększony certyfikat instruktora tenisa ziemnego PZT"
              id="certificate-large"
              onclick="event.stopPropagation()">
 
@@ -1925,7 +2024,7 @@
             revealObserver.observe(element);
         });
 
-        // AKTUALNA DATA I GODZINA
+        // AKTUALNA DATA I GODZINA - CZAS POLSKI
 
         function updateClock() {
 
@@ -1934,7 +2033,7 @@
             const date = new Intl.DateTimeFormat("pl-PL", {
                 timeZone: "Europe/Warsaw",
                 day: "2-digit",
-                month: "long",
+                month: "2-digit",
                 year: "numeric"
             });
 
