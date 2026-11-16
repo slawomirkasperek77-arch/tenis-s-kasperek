@@ -7,13 +7,10 @@
 
     <!-- PODSTAWOWE SEO -->
     <title>Instruktor tenisa Kęty, Oświęcim, Bielsko-Biała | Tenis S. Kasperek</title>
-
     <meta name="description" content="Indywidualne i grupowe treningi tenisa ziemnego dla dzieci, młodzieży i dorosłych. Instruktor PZT. Kęty, Oświęcim, Bielsko-Biała, Kozy i Andrychów. Umów trening!">
-
     <meta name="robots" content="index, follow">
     <meta name="author" content="Sławomir Kasperek">
     <meta name="theme-color" content="#102B46">
-
     <link rel="canonical" href="https://slawomirkasperek77-arch.github.io/tenis-s-kasperek/">
 
     <!-- UDOSTĘPNIANIE STRONY -->
@@ -39,7 +36,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            scroll-padding-top: 120px;
         }
 
         body {
@@ -59,23 +56,24 @@
             width: 0%;
             height: 4px;
             background-color: #78A832;
-            z-index: 1100;
+            z-index: 1300;
         }
 
-        /* GÓRNY PASEK - DATA, ZEGAR I INSTAGRAM */
+        /* GÓRNY PASEK - DATA I GODZINA */
 
         .site-topbar {
             position: sticky;
             top: 0;
-            z-index: 1000;
-            min-height: 42px;
-            padding: 8px 5%;
+            z-index: 1100;
+            height: 42px;
+            padding: 0 5%;
             box-sizing: border-box;
             background-color: #0B2035;
             color: #C5D0DA;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
+            justify-items: center;
             gap: 15px;
             font-size: 11px;
             line-height: 1.4;
@@ -84,7 +82,8 @@
         .topbar-item {
             display: flex;
             align-items: center;
-            gap: 6px;
+            justify-content: center;
+            gap: 7px;
             white-space: nowrap;
         }
 
@@ -94,31 +93,10 @@
         }
 
         .topbar-clock {
-            color: #78A832;
+            color: #A6CE63;
             font-weight: 700;
             letter-spacing: 0.5px;
             font-variant-numeric: tabular-nums;
-        }
-
-        .topbar-instagram {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            white-space: nowrap;
-            transition: color 0.3s;
-        }
-
-        .topbar-instagram:hover {
-            color: #78A832;
-        }
-
-        .topbar-instagram svg {
-            width: 17px;
-            height: 17px;
-            fill: currentColor;
         }
 
         /* NAGŁÓWEK I MENU */
@@ -126,30 +104,72 @@
         header {
             background-color: #102B46;
             color: white;
-            padding: 20px 40px;
+            padding: 18px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
             position: sticky;
             top: 42px;
-            z-index: 999;
+            z-index: 1000;
+            box-sizing: border-box;
         }
 
         .logo {
             font-size: 22px;
-            font-weight: bold;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 22px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
             font-weight: bold;
+            font-size: 14px;
             transition: color 0.3s;
         }
 
         nav a:hover {
             color: #78A832;
+        }
+
+        /* INSTAGRAM W NAGŁÓWKU */
+
+        .header-instagram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 10px 15px;
+            background: linear-gradient(120deg, #833AB4, #C13584, #F77737);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .header-instagram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .header-instagram svg {
+            width: 19px;
+            height: 19px;
+            fill: currentColor;
+            flex-shrink: 0;
         }
 
         /* SEKCJA POWITALNA */
@@ -164,6 +184,7 @@
             justify-content: space-between;
             align-items: center;
             gap: 40px;
+            box-sizing: border-box;
         }
 
         .hero-text {
@@ -255,6 +276,7 @@
             margin: 40px auto;
             padding: 45px 30px;
             border-radius: 20px;
+            box-sizing: border-box;
         }
 
         .motto h2 {
@@ -287,6 +309,7 @@
             padding: 35px 30px;
             background-color: white;
             border-radius: 20px;
+            box-sizing: border-box;
         }
 
         .statistics-grid {
@@ -322,6 +345,7 @@
             margin: 40px auto;
             padding: 50px 30px;
             border-radius: 20px;
+            box-sizing: border-box;
         }
 
         #o-mnie h2 {
@@ -416,6 +440,7 @@
             margin: 40px auto;
             padding: 50px 30px;
             border-radius: 20px;
+            box-sizing: border-box;
         }
 
         #oferta h2 {
@@ -524,6 +549,7 @@
             margin: 40px auto;
             padding: 50px 30px;
             border-radius: 20px;
+            box-sizing: border-box;
         }
 
         #lokalizacje h2 {
@@ -592,6 +618,7 @@
             margin: 40px auto;
             padding: 50px 30px;
             border-radius: 20px;
+            box-sizing: border-box;
         }
 
         #galeria h2 {
@@ -674,6 +701,7 @@
             margin: 40px auto;
             padding: 50px 30px;
             border-radius: 20px;
+            box-sizing: border-box;
         }
 
         #kontakt h2 {
@@ -868,18 +896,29 @@
             line-height: 1.7;
         }
 
-        /* STOPKA */
+        /* STOPKA - DATA AKTUALIZACJI */
 
         footer {
             background-color: #102B46;
             color: #C5D0DA;
-            padding: 25px 20px;
+            padding: 28px 20px;
             font-size: 13px;
             line-height: 1.7;
         }
 
         footer p {
             margin: 5px;
+        }
+
+        .footer-update {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 7px 15px;
+            border: 1px solid rgba(120, 168, 50, 0.55);
+            border-radius: 20px;
+            color: #A6CE63;
+            font-size: 11px;
+            font-weight: 600;
         }
 
         /* POWIĘKSZENIE CERTYFIKATU */
@@ -1026,50 +1065,113 @@
             }
         }
 
+        /* TABLETY I MNIEJSZE LAPTOPY */
+
+        @media (max-width: 1050px) and (min-width: 769px) {
+
+            header {
+                padding: 16px 3%;
+                gap: 12px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            nav {
+                gap: 13px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .header-instagram {
+                padding: 9px 11px;
+                font-size: 11px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .location-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
         /* WERSJA MOBILNA */
 
         @media (max-width: 768px) {
 
+            html {
+                scroll-padding-top: 150px;
+            }
+
+            /* GÓRNY PASEK NA TELEFONIE */
+
             .site-topbar {
-                min-height: 40px;
-                padding: 8px 10px;
-                gap: 8px;
-                justify-content: space-between;
+                height: 54px;
+                padding: 5px 8px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 1px;
                 font-size: 9px;
             }
 
             .topbar-item {
-                gap: 4px;
+                gap: 5px;
             }
 
-            .topbar-instagram {
-                gap: 4px;
-                font-size: 9px;
+            .topbar-item:first-child {
+                grid-row: 1;
             }
 
-            .topbar-instagram svg {
-                width: 15px;
-                height: 15px;
+            .topbar-item:nth-child(2) {
+                grid-row: 2;
             }
+
+            /* NAGŁÓWEK NA TELEFONIE */
 
             header {
                 flex-direction: column;
-                gap: 20px;
-                padding: 20px;
-                top: 40px;
+                gap: 13px;
+                padding: 15px 12px;
+                top: 54px;
+            }
+
+            .logo {
+                font-size: 20px;
             }
 
             nav {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 15px;
+                gap: 12px 17px;
             }
 
             nav a {
                 margin-left: 0;
-                font-size: 14px;
+                font-size: 13px;
             }
+
+            .header-instagram {
+                padding: 8px 14px;
+                font-size: 11px;
+            }
+
+            .header-instagram svg {
+                width: 17px;
+                height: 17px;
+            }
+
+            /* SEKCJA POWITALNA */
 
             .hero {
                 flex-direction: column;
@@ -1077,7 +1179,6 @@
                 padding: 25px;
                 margin: 30px auto;
                 gap: 25px;
-                box-sizing: border-box;
             }
 
             .hero-text {
@@ -1096,11 +1197,12 @@
                 height: 250px;
             }
 
+            /* MOTTO */
+
             .motto {
                 width: 85%;
                 padding: 30px 20px;
                 margin: 30px auto;
-                box-sizing: border-box;
             }
 
             .motto h2 {
@@ -1111,10 +1213,11 @@
                 font-size: 16px;
             }
 
+            /* LICZNIKI */
+
             #statistics {
                 width: 85%;
                 padding: 25px 15px;
-                box-sizing: border-box;
             }
 
             .statistics-grid {
@@ -1130,11 +1233,12 @@
                 font-size: 35px;
             }
 
+            /* O MNIE */
+
             #o-mnie {
                 width: 85%;
                 padding: 30px 20px;
                 margin: 30px auto;
-                box-sizing: border-box;
             }
 
             #o-mnie h2 {
@@ -1150,11 +1254,12 @@
                 line-height: 1.8;
             }
 
+            /* OFERTA */
+
             #oferta {
                 width: 85%;
                 padding: 30px 20px;
                 margin: 30px auto;
-                box-sizing: border-box;
             }
 
             #oferta h2 {
@@ -1197,11 +1302,12 @@
                 line-height: 1.8;
             }
 
+            /* LOKALIZACJE */
+
             #lokalizacje {
                 width: 85%;
                 padding: 30px 20px;
                 margin: 30px auto;
-                box-sizing: border-box;
             }
 
             #lokalizacje h2 {
@@ -1222,11 +1328,12 @@
                 font-size: 14px;
             }
 
+            /* GALERIA */
+
             #galeria {
                 width: 85%;
                 padding: 30px 20px;
                 margin: 30px auto;
-                box-sizing: border-box;
             }
 
             #galeria h2 {
@@ -1246,11 +1353,12 @@
                 height: 230px;
             }
 
+            /* KONTAKT */
+
             #kontakt {
                 width: 85%;
                 padding: 30px 20px;
                 margin: 30px auto;
-                box-sizing: border-box;
             }
 
             #kontakt h2 {
@@ -1269,6 +1377,8 @@
             .contact-card a {
                 font-size: 14px;
             }
+
+            /* CERTYFIKAT */
 
             .certificate {
                 margin-top: 35px;
@@ -1297,6 +1407,8 @@
                 right: 20px;
                 font-size: 40px;
             }
+
+            /* PRZYCISKI PŁYWAJĄCE */
 
             .back-to-top {
                 bottom: 18px;
@@ -1356,7 +1468,7 @@
                 min-height: 110px;
             }
 
-            /* OPISY WEWNĄTRZ PÓL WIDOCZNE NA SMARTFONACH */
+            /* OPISY WEWNĄTRZ PÓL */
 
             .form-field input::placeholder,
             .form-field textarea::placeholder {
@@ -1389,19 +1501,33 @@
         @media (max-width: 380px) {
 
             .site-topbar {
-                padding-left: 6px;
-                padding-right: 6px;
-                gap: 5px;
+                padding-left: 5px;
+                padding-right: 5px;
                 font-size: 8px;
             }
 
-            .topbar-instagram {
-                font-size: 8px;
+            .logo {
+                font-size: 18px;
             }
 
-            .topbar-instagram svg {
-                width: 13px;
-                height: 13px;
+            nav {
+                gap: 10px 13px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .header-instagram {
+                font-size: 10px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
         }
@@ -1415,43 +1541,26 @@
 
     <div id="scroll-progress"></div>
 
-    <!-- GÓRNY PASEK - DATA, ZEGAR I INSTAGRAM -->
+    <!-- GÓRNY PASEK - AKTUALNA DATA I GODZINA -->
 
     <div class="site-topbar">
 
         <div class="topbar-item">
-            <span>OSTATNIA AKTUALIZACJA:</span>
-            <strong>16.11.2026</strong>
+            <strong>DZISIAJ:</strong>
+            <span id="currentDate"></span>
         </div>
 
         <div class="topbar-item">
-            <span>TERAZ:</span>
-            <span class="topbar-clock">
-                <span id="currentDate"></span>
-                |
-                <span id="currentTime"></span>
-            </span>
+            <strong>AKTUALNA GODZINA:</strong>
+            <span class="topbar-clock" id="currentTime"></span>
         </div>
-
-        <a class="topbar-instagram"
-           href="https://www.instagram.com/tenis.kas77/"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Odwiedź Instagram TENIS S. KASPEREK">
-
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8zm4.2 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
-            </svg>
-
-            @tenis.kas77
-
-        </a>
 
     </div>
 
     <!-- MENU GŁÓWNE -->
 
     <header>
+
         <div class="logo">TENIS S. KASPEREK</div>
 
         <nav>
@@ -1461,6 +1570,23 @@
             <a href="#galeria">Galeria</a>
             <a href="#kontakt">Kontakt</a>
         </nav>
+
+        <!-- INSTAGRAM -->
+
+        <a class="header-instagram"
+           href="https://www.instagram.com/tenis.kas77/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Odwiedź Instagram TENIS S. KASPEREK">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8zm4.2 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/>
+            </svg>
+
+            INSTAGRAM
+
+        </a>
+
     </header>
 
     <!-- SEKCJA POWITALNA -->
@@ -1922,6 +2048,10 @@
 
         <p>© 2026 TENIS S. KASPEREK. Wszelkie prawa zastrzeżone.</p>
 
+        <div class="footer-update">
+            OSTATNIA AKTUALIZACJA: 16.11.2026
+        </div>
+
     </footer>
 
     <!-- PŁYWAJĄCY PRZYCISK TELEFONU -->
@@ -2032,8 +2162,9 @@
 
             const date = new Intl.DateTimeFormat("pl-PL", {
                 timeZone: "Europe/Warsaw",
+                weekday: "long",
                 day: "2-digit",
-                month: "2-digit",
+                month: "long",
                 year: "numeric"
             });
 
