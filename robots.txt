@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://slawomirkasperek77-arch.github.io/tenis-s-kasperek/sitemap.xml
